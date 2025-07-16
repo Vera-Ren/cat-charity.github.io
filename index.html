@@ -3,197 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-en="Purr-fect Haven - Cat Charity" data-lang-zh="喵星人守护站 - 猫咪慈善" data-lang-th="เพอร์เฟค เฮฟเว่น - องค์กรการกุศลเพื่อแมว" data-lang-id="Surga Sempurna - Amal Kucing">Purr-fect Haven - Cat Charity</title>
-    <link rel="stylesheet" href="style.css"> <link rel="icon" href="images/favicon.png" type="image/png"> </head>
+    <title data-lang="app_title">Cat Guardians - Home of Love and Hope</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-
     <header>
-        <div class="container">
-            <h1 id="site-title">
-                <img src="images/logo.png" alt="Paw Logo" class="logo">
-                <span data-lang-en="Purr-fect Haven" data-lang-zh="喵星人守护站" data-lang-th="เพอร์เฟค เฮฟเว่น" data-lang-id="Surga Sempurna">Purr-fect Haven</span>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#donations" data-lang-en="Donation Module" data-lang-zh="捐款模块" data-lang-th="โมดูลการบริจาค" data-lang-id="Modul Donasi">Donation Module</a></li>
-                    <li><a href="#cat-cafes" data-lang-en="Cat Cafe Alliance" data-lang-zh="猫咖联盟" data-lang-th="พันธมิตรคาเฟ่แมว" data-lang-id="Aliansi Kafe Kucing">Cat Cafe Alliance</a></li>
-                    <li><a href="#our-cats" data-lang-en="Our Feline Friends" data-lang-zh="我们的猫咪" data-lang-th="เพื่อนแมวของเรา" data-lang-id="Teman Kucing Kami">Our Feline Friends</a></li>
-                    <li><a href="#contact" data-lang-en="Contact Us" data-lang-zh="联系我们" data-lang-th="ติดต่อเรา" data-lang-id="Hubungi Kami">Contact Us</a></li>
-                </ul>
-                <div class="lang-switcher">
-                    <span class="active" data-lang="en">EN</span> | <span data-lang="zh">中</span> | <span data-lang="th">TH</span> | <span data-lang="id">ID</span>
-                </div>
-            </nav>
+        <nav>
+            <div class="logo">Cat Guardians</div>
+            <div class="language-selector">
+                <select id="language-switcher">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="ko">한국어</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="th">ภาษาไทย</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+            <ul>
+                <li><a href="#our-story" data-lang="nav_our_story">Our Story</a></li>
+                <li><a href="#cat-cafe-alliance" data-lang="nav_cat_cafe_alliance">Cat Cafe Alliance</a></li>
+                <li><a href="#donate" data-lang="nav_donate">Donate</a></li>
+                <li><a href="#tracking" data-lang="nav_tracking">Tracking</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 data-lang="home_title">Welcome to Cat Guardians Home</h1>
+            <p data-lang="home_subtitle">Join us to create a better world for stray cats.</p>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <p data-lang-en="We are dedicated to providing stray cats with warm homes and bright futures. Every act of kindness from you transforms into hope for their lives." data-lang-zh="我们致力于为流浪猫提供温暖的家和美好的未来。您的每一份爱心，都将化为它们活下去的希望。" data-lang-th="เรามุ่งมั่นที่จะให้บ้านที่อบอุ่นและอนาคตที่สดใสแก่แมวจรจัด ทุกการกระทำที่มีเมตตาจากคุณจะเปลี่ยนเป็นความหวังสำหรับชีวิตของพวกมัน" data-lang-id="Kami berdedikasi untuk menyediakan rumah yang hangat dan masa depan yang cerah bagi kucing-kucing jalanan. Setiap tindakan kebaikan dari Anda akan menjadi harapan bagi kehidupan mereka.">We are dedicated to providing stray cats with warm homes and bright futures. Every act of kindness from you transforms into hope for their lives.</p>
+        <section id="our-story" class="section">
+            <h2 data-lang="section_our_story_title">Our Story</h2>
+            <div class="story-content">
+                <img src="images/our-story-1.jpg" alt="Me and my adopted cat" class="story-image">
+                <p data-lang="story_para1">Hello! I'm Aiko, an ordinary cat lover. My story began with a little cat named 'Peanut'. Three years ago, on a cold rainy night, I found Peanut huddled in a corner, completely drenched. She was emaciated and her eyes were full of fear. At that moment, I decided to take her home and give her a warm sanctuary.</p>
+                <p data-lang="story_para2">After recovering, Peanut became lively and adorable, returning my love in her own unique way every day. Her arrival completely changed my life and made me realize that countless stray cats, just like Peanut, needed help. This strong sense of mission drove me to create this platform, hoping to gather more love and support for these homeless little lives.</p>
+                <img src="images/our-story-2.jpg" alt="Me and my adopted cat photo" class="story-image">
+                <p data-lang="story_para3">We believe every life deserves to be treated with kindness. Through this website, we hope to share our story, connect with more like-minded friends, and together provide food, medical care, and homes for stray cats. Thank you for visiting, we look forward to shining a light of hope for cats with you!</p>
             </div>
         </section>
 
-        <section id="donations" class="donation-module">
-            <div class="container">
-                <h2 data-lang-en="💖 Donation Module" data-lang-zh="💖 捐款模块" data-lang-th="💖 โมดูลการบริจาค" data-lang-id="💖 Modul Donasi">💖 Donation Module</h2>
-
-                <div class="donation-summary">
-                    <h3 data-lang-en="🐾 Total Donations Received" data-lang-zh="🐾 捐款总额" data-lang-th="🐾 ยอดบริจาครวม" data-lang-id="🐾 Total Donasi Diterima">🐾 Total Donations Received</h3>
-                    <p data-lang-en="Current Total Donations: <span id='total-donations-en'>Actively fundraising!</span>" data-lang-zh="目前捐款总额：<span id='total-donations'>努力筹集中！</span>" data-lang-th="ยอดบริจาคปัจจุบัน: <span id='total-donations-th'>กำลังระดมทุน!</span>" data-lang-id="Total Donasi Saat Ini: <span id='total-donations-id'>Sedang Menggalang Dana!</span>">Current Total Donations: <span id='total-donations-en'>Actively fundraising!</span></p>
-                    <p data-lang-en="Goal: To help even more stray cats!" data-lang-zh="目标：帮助更多的流浪猫咪！" data-lang-th="เป้าหมาย: เพื่อช่วยเหลือแมวจรจัดให้มากขึ้น!" data-lang-id="Tujuan: Untuk membantu lebih banyak kucing jalanan!">Goal: To help even more stray cats!</p>
+        <section id="cat-cafe-alliance" class="section">
+            <h2 data-lang="section_cat_cafe_alliance_title">Cat Cafe Alliance</h2>
+            <div class="cafe-list">
+                <div class="cafe-card" data-cafe="odd-cat-cafe">
+                    <img src="images/odd-cat-cafe.jpg" alt="Odd Cat Cafe Bali">
+                    <h3 data-lang="cafe_odd_cat_title">Odd Cat Cafe Bali</h3>
+                    <p data-lang="cafe_odd_cat_address">Address: Jl. Raya Canggu No.88, Canggu, Bali, Indonesia</p>
                 </div>
-
-                <div class="donation-breakdown">
-                    <h3 data-lang-en="🔎 Where Your Donations Go" data-lang-zh="🔎 捐款去向" data-lang-th="🔎 เงินบริจาคของคุณไปที่ไหน" data-lang-id="🔎 Ke Mana Donasi Anda Pergi">🔎 Where Your Donations Go</h3>
-                    <ul>
-                        <li><span data-lang-en="Cat Food & Supplements:" data-lang-zh="猫粮与营养品：" data-lang-th="อาหารแมวและอาหารเสริม:" data-lang-id="Makanan Kucing & Suplemen:">Cat Food & Supplements:</span> <span data-lang-en="Providing daily essential healthy food to ensure the cats stay strong." data-lang-zh="为猫咪提供每日所需的健康食物，确保它们身体强壮。" data-lang-th="จัดหาอาหารเพื่อสุขภาพที่จำเป็นในแต่ละวันเพื่อให้แมวแข็งแรง" data-lang-id="Menyediakan makanan sehat harian yang penting untuk memastikan kucing tetap kuat.">Providing daily essential healthy food to ensure the cats stay strong.</span></li>
-                        <li><span data-lang-en="Medical Aid:" data-lang-zh="医疗救助：" data-lang-th="การช่วยเหลือทางการแพทย์:" data-lang-id="Bantuan Medis:">Medical Aid:</span> <span data-lang-en="Covering medical expenses for injured or sick cats, including vaccinations, spaying/neutering, and routine check-ups." data-lang-zh="支付受伤或生病猫咪的医疗费用，包括疫苗、绝育手术和日常检查。" data-lang-th="ครอบคลุมค่ารักษาพยาบาลสำหรับแมวที่บาดเจ็บหรือป่วย รวมถึงการฉีดวัคซีน, การทำหมัน/ตอน และการตรวจสุขภาพตามปกติ" data-lang-id="Menanggung biaya medis untuk kucing yang terluka atau sakit, termasuk vaksinasi, sterilisasi/kastrasi, dan pemeriksaan rutin.">Covering medical expenses for injured or sick cats, including vaccinations, spaying/neutering, and routine check-ups.</span></li>
-                        <li><span data-lang-en="Shelter Construction & Maintenance:" data-lang-zh="收容所建设与维护：" data-lang-th="การก่อสร้างและบำรุงรักษาสถานพักพิง:" data-lang-id="Pembangunan & Pemeliharaan Penampungan:">Shelter Construction & Maintenance:</span> <span data-lang-en="Improving the living environment for cats and providing warm, comfortable accommodations." data-lang-zh="改善猫咪居住环境，提供温暖舒适的住所。" data-lang-th="ปรับปรุงสภาพแวดล้อมที่อยู่อาศัยสำหรับแมวและจัดหาที่พักที่อบอุ่นและสบาย" data-lang-id="Meningkatkan lingkungan hidup kucing dan menyediakan akomodasi yang hangat dan nyaman.">Improving the living environment for cats and providing warm, comfortable accommodations.</span></li>
-                        <li><span data-lang-en="Adoption Promotion:" data-lang-zh="领养推广：" data-lang-th="การส่งเสริมการรับเลี้ยง:" data-lang-id="Promosi Adopsi:">Adoption Promotion:</span> <span data-lang-en="Organizing adoption events to help cats find their forever homes." data-lang-zh="举办领养活动，帮助猫咪找到永远的家。" data-lang-th="จัดกิจกรรมรับเลี้ยงบุตรบุญธรรมเพื่อช่วยให้แมวพบเจอครอบครัวตลอดไป" data-lang-id="Mengadakan acara adopsi untuk membantu kucing menemukan rumah selamanya.">Organizing adoption events to help cats find their forever homes.</span></li>
-                        <li><span data-lang-en="Emergency Reserve:" data-lang-zh="应急储备：" data-lang-th="เงินสำรองฉุกเฉิน:" data-lang-id="Cadangan Darurat:">Emergency Reserve:</span> <span data-lang-en="Responding to unforeseen circumstances and urgent rescues." data-lang-zh="应对突发情况和紧急救助。" data-lang-th="การตอบสนองต่อสถานการณ์ที่ไม่คาดฝันและการช่วยเหลือฉุกเฉิน" data-lang-id="Menanggapi keadaan tak terduga dan penyelamatan darurat.">Responding to unforeseen circumstances and urgent rescues.</span></li>
-                    </ul>
-                </div>
-
-                <div class="donation-methods">
-                    <h3 data-lang-en="💰 Donation Details" data-lang-zh="💰 捐款细节" data-lang-th="💰 รายละเอียดการบริจาค" data-lang-id="💰 Detail Donasi">💰 Donation Details</h3>
-                    <p data-lang-en="We promise that all donations will be used for the welfare of cats, and we will regularly publish detailed income and expenditure reports. You can donate through the following methods:" data-lang-zh="我们承诺所有捐款都将用于猫咪福利，并定期公布详细的收支报告。您可以通过以下方式进行捐款：" data-lang-th="เราสัญญาว่าเงินบริจาคทั้งหมดจะถูกนำไปใช้เพื่อสวัสดิภาพของแมว และเราจะเผยแพร่รายงานรายรับและรายจ่ายโดยละเอียดเป็นประจำ คุณสามารถบริจาคได้ด้วยวิธีดังต่อไปนี้:" data-lang-id="Kami berjanji bahwa semua donasi akan digunakan untuk kesejahteraan kucing, dan kami akan secara teratur menerbitkan laporan pemasukan dan pengeluaran yang terperinci. Anda dapat berdonasi melalui metode berikut:">We promise that all donations will be used for the welfare of cats, and we will regularly publish detailed income and expenditure reports. You can donate through the following methods:</p>
-                    <ul>
-                        <li><span data-lang-en="Online Donation:" data-lang-zh="在线捐款：" data-lang-th="การบริจาคออนไลน์:" data-lang-id="Donasi Online:">Online Donation:</span> <span data-lang-en="Supports various payment methods, safe and convenient." data-lang-zh="支持多种支付方式，安全便捷。" data-lang-th="รองรับวิธีการชำระเงินที่หลากหลาย ปลอดภัยและสะดวก" data-lang-id="Mendukung berbagai metode pembayaran, aman dan nyaman.">Supports various payment methods, safe and convenient.</span></li>
-                        <li><span data-lang-en="Bank Transfer:" data-lang-zh="银行转账：" data-lang-th="การโอนเงินผ่านธนาคาร:" data-lang-id="Transfer Bank:">Bank Transfer:</span> (<span data-lang-en="Bank account information here" data-lang-zh="这里放置银行账户信息" data-lang-th="ข้อมูลบัญชีธนาคารที่นี่" data-lang-id="Informasi rekening bank di sini">Bank account information here</span>)</li>
-                        <li><span data-lang-en="Material Donations:" data-lang-zh="物资捐赠：" data-lang-th="การบริจาคสิ่งของ:" data-lang-id="Donasi Material:">Material Donations:</span> <span data-lang-en="We also welcome donations of cat food, litter, toys, and other supplies." data-lang-zh="我们也欢迎捐赠猫粮、猫砂、玩具等物资。" data-lang-th="เรายินดีรับบริจาคอาหารแมว ทรายแมว ของเล่น และอุปกรณ์อื่นๆ ด้วย" data-lang-id="Kami juga menerima donasi makanan kucing, pasir kucing, mainan, dan perlengkapan lainnya.">We also welcome donations of cat food, litter, toys, and other supplies.</span></li>
-                    </ul>
+                <div class="cafe-card" data-cafe="paws-cat-cafe">
+                    <img src="images/paws-cat-cafe.jpg" alt="Paws Cat Cafe Thailand">
+                    <h3 data-lang="cafe_paws_cat_title">Paws Cat Cafe Thailand</h3>
+                    <p data-lang="cafe_paws_cat_address">Address: 123 Sukhumvit Rd, Bangkok, Thailand</p>
                 </div>
             </div>
-        </section>
 
-        <section id="cat-cafes" class="cat-cafe-alliance-module">
-            <div class="container">
-                <h2 data-lang-en="🐾 Cat Cafe Alliance" data-lang-zh="🐾 猫咖联盟" data-lang-th="🐾 พันธมิตรคาเฟ่แมว" data-lang-id="🐾 Aliansi Kafe Kucing">🐾 Cat Cafe Alliance</h2>
-                <p class="section-description" data-lang-en="Here, you can explore our partnered cat cafes in various locations, learn about their unique charm, their adorable resident cats, and directly support their operations and the well-being of their felines." data-lang-zh="在这里，您可以探索我们合作的各地猫咪咖啡馆，了解它们的独特之处、可爱的猫咪，并直接支持它们的运营和猫咪福利。" data-lang-th="ที่นี่ คุณสามารถสำรวจคาเฟ่แมวพันธมิตรของเราในสถานที่ต่างๆ เรียนรู้เกี่ยวกับเสน่ห์เฉพาะตัว แมวเหมียวที่น่ารัก และสนับสนุนการดำเนินงานและสวัสดิภาพของแมวโดยตรง" data-lang-id="Di sini, Anda dapat menjelajahi kafe kucing mitra kami di berbagai lokasi, belajar tentang pesona unik mereka, kucing-kucing penghuni yang menggemaskan, dan langsung mendukung operasional serta kesejahteraan kucing mereka.">Here, you can explore our partnered cat cafes in various locations, learn about their unique charm, their adorable resident cats, and directly support their operations and the well-being of their felines.</p>
-
-                <div class="cat-cafe-card">
-                    <h3 data-lang-en="🇮🇩 Indonesia Cat Cafe" data-lang-zh="🇮🇩 印度尼西亚猫咖啡" data-lang-th="🇮🇩 คาเฟ่แมวอินโดนีเซีย" data-lang-id="🇮🇩 Kafe Kucing Indonesia">🇮🇩 Indonesia Cat Cafe</h3>
-                    <p class="cafe-tagline" data-lang-en="Discover Bali's feline paradise, where every cup of coffee brings hope to cats." data-lang-zh="探索巴厘岛的猫咪天堂，每一杯咖啡都为猫咪带来希望。" data-lang-th="ค้นพบสวรรค์ของแมวแห่งบาหลี ที่กาแฟทุกแก้วนำความหวังมาสู่แมว" data-lang-id="Temukan surga kucing di Bali, di mana setiap cangkir kopi membawa harapan bagi kucing.">Discover Bali's feline paradise, where every cup of coffee brings hope to cats.</p>
-                    <ul>
-                        <li><strong><span data-lang-en="Cafe Name:" data-lang-zh="猫咖名称：" data-lang-th="ชื่อคาเฟ่:" data-lang-id="Nama Kafe:">Cafe Name:</span></strong> <span data-lang-en="Bali Purr-fect Cafe" data-lang-zh="巴厘喵星人咖啡" data-lang-th="บาหลี เพอร์เฟค คาเฟ่" data-lang-id="Kafe Purr-fect Bali">Bali Purr-fect Cafe</span></li>
-                        <li><strong><span data-lang-en="Address:" data-lang-zh="地址：" data-lang-th="ที่อยู่:" data-lang-id="Alamat:">Address:</span></strong> <span data-lang-en="JL. Sunset Road No.88, Kuta, Bali, Indonesia" data-lang-zh="JL. Sunset Road No.88, Kuta, Bali, Indonesia" data-lang-th="JL. Sunset Road No.88, Kuta, Bali, Indonesia" data-lang-id="JL. Sunset Road No.88, Kuta, Bali, Indonesia">JL. Sunset Road No.88, Kuta, Bali, Indonesia</span></li>
-                        <li><strong><span data-lang-en="Opening Hours:" data-lang-zh="开放时间：" data-lang-th="เวลาเปิดทำการ:" data-lang-id="Jam Buka:">Opening Hours:</span></strong> <span data-lang-en="Daily 10:00 AM - 8:00 PM" data-lang-zh="每天 10:00 - 20:00" data-lang-th="ทุกวัน 10:00 - 20:00 น." data-lang-id="Setiap hari 10.00 - 20.00">Daily 10:00 AM - 8:00 PM</span></li>
-                        <li><strong><span data-lang-en="Features:" data-lang-zh="特色：" data-lang-th="คุณสมบัติพิเศษ:" data-lang-id="Fitur:">Features:</span></strong> <span data-lang-en="Features a spacious cat play area, offering local specialty coffee and snacks." data-lang-zh="拥有宽敞的猫咪活动区，提供本地特色咖啡和点心。" data-lang-th="มีพื้นที่เล่นสำหรับแมวกว้างขวาง ให้บริการกาแฟและของว่างพิเศษในท้องถิ่น" data-lang-id="Menampilkan area bermain kucing yang luas, menawarkan kopi dan makanan ringan khas lokal.">Features a spacious cat play area, offering local specialty coffee and snacks.</span></li>
-                    </ul>
-
-                    <h4 data-lang-en="🐾 Resident Cat Profiles" data-lang-zh="🐾 店内猫咪档案" data-lang-th="🐾 โปรไฟล์แมวประจำคาเฟ่" data-lang-id="🐾 Profil Kucing Penghuni">🐾 Resident Cat Profiles</h4>
-                    <div class="cafe-cats-grid">
-                        <div class="cat-profile-card small">
-                            <h5 data-lang-en="🌟 Mimi" data-lang-zh="🌟 咪咪" data-lang-th="🌟 มิมิ" data-lang-id="🌟 Mimi">🌟 Mimi</h5>
-                            <img src="images/bali_mimi.jpg" alt="Mimi" class="cat-img">
-                            <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="A gentle calico cat who loves basking in the sun by the window." data-lang-zh="一只喜欢躺在窗边晒太阳的温柔三花猫。" data-lang-th="แมวสามสีที่อ่อนโยน ชอบอาบแดดข้างหน้าต่าง" data-lang-id="Kucing belang tiga yang lembut yang suka berjemur di bawah sinar matahari di dekat jendela.">A gentle calico cat who loves basking in the sun by the window.</span></p>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/YOUR_BALI_MIMI_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+            <div id="cafe-details" class="hidden">
+                <button class="back-to-cafes" data-lang="back_to_cafes_btn">Back to Cafes List</button>
+                <div id="odd-cat-cafe-details" class="cafe-detail-section hidden">
+                    <h3 data-lang="cafe_details_odd_cat_title">Cats at Odd Cat Cafe Bali</h3>
+                    <div class="cat-list">
+                        <div class="cat-card">
+                            <img src="images/odd-cat-1.jpg" alt="Odd Cat Cafe Cat 1">
+                            <h4 data-lang="cat_peanut_name">Cat: Peanut</h4>
+                            <p data-lang="cat_peanut_char">Personality: Lively and playful, loves playing with feather wands.</p>
                         </div>
-                        <div class="cat-profile-card small">
-                            <h5 data-lang-en="🌟 Little Black" data-lang-zh="🌟 小黑" data-lang-th="🌟 เจ้าดำ" data-lang-id="🌟 Si Hitam">🌟 Little Black</h5>
-                            <img src="images/bali_little_black.jpg" alt="Little Black" class="cat-img">
-                            <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="A lively black cat, the life of the cafe." data-lang-zh="活泼好动的小黑猫，是店里的气氛担当。" data-lang-th="แมวดำที่ร่าเริง เป็นสีสันของคาเฟ่" data-lang-id="Kucing hitam yang lincah, penarik perhatian kafe.">A lively black cat, the life of the cafe.</span></p>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/YOUR_BALI_LITTLE_BLACK_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                        <div class="cat-card">
+                            <img src="images/odd-cat-2.jpg" alt="Odd Cat Cafe Cat 2">
+                            <h4 data-lang="cat_sugar_bean_name">Cat: Sugar Bean</h4>
+                            <p data-lang="cat_sugar_bean_char">Personality: Gentle and affectionate, loves being petted.</p>
                         </div>
-                        </div>
-                    <p class="donation-cloud-adopt-text"><strong data-lang-en="💰 Direct Donation:" data-lang-zh="💰 直接捐款：" data-lang-th="💰 บริจาคโดยตรง:" data-lang-id="💰 Donasi Langsung:">💰 Direct Donation:</strong> <span data-lang-en="Support the operations and cat welfare at Bali Purr-fect Cafe." data-lang-zh="支持巴厘喵星人咖啡的运营和猫咪福利。" data-lang-th="สนับสนุนการดำเนินงานและสวัสดิภาพของแมวที่บาหลี เพอร์เฟค คาเฟ่" data-lang-id="Dukung operasional dan kesejahteraan kucing di Bali Purr-fect Cafe.">Support the operations and cat welfare at Bali Purr-fect Cafe.</span></p>
-                    <a href="YOUR_BALI_DONATION_LINK" class="button" target="_blank" data-lang-en="Donate Now" data-lang-zh="立即捐款" data-lang-th="บริจาคตอนนี้" data-lang-id="Donasi Sekarang">Donate Now</a>
-                    <p class="donation-cloud-adopt-text"><strong data-lang-en="☁️ Virtual Adoption:" data-lang-zh="☁️ 云领养：" data-lang-th="☁️ การรับเลี้ยงเสมือนจริง:" data-lang-id="☁️ Adopsi Virtual:">☁️ Virtual Adoption:</strong> <span data-lang-en="Can't adopt right now? Choose virtual adoption to regularly support your favorite cat each month." data-lang-zh="暂时无法领养？选择云领养，每月定期支持您喜欢的猫咪。" data-lang-th="รับเลี้ยงตอนนี้ไม่ได้? เลือกการรับเลี้ยงเสมือนจริงเพื่อสนับสนุนแมวที่คุณชื่นชอบเป็นประจำทุกเดือน" data-lang-id="Tidak bisa mengadopsi sekarang? Pilih adopsi virtual untuk mendukung kucing favorit Anda setiap bulan secara teratur.">Can't adopt right now? Choose virtual adoption to regularly support your favorite cat each month.</span></p>
-                    <a href="YOUR_BALI_VIRTUAL_ADOPTION_LINK" class="button" target="_blank" data-lang-en="Virtually Adopt a Cat" data-lang-zh="云领养一只猫咪" data-lang-th="รับเลี้ยงแมวเสมือนจริง" data-lang-id="Adopsi Kucing Secara Virtual">Virtually Adopt a Cat</a>
+                    </div>
                 </div>
 
-                <div class="cat-cafe-card">
-                    <h3 data-lang-en="🇹🇭 Thailand Cat Cafe" data-lang-zh="🇹🇭 泰国猫咖啡" data-lang-th="🇹🇭 คาเฟ่แมวไทย" data-lang-id="🇹🇭 Kafe Kucing Thailand">🇹🇭 Thailand Cat Cafe</h3>
-                    <p class="cafe-tagline" data-lang-en="Bangkok's feline paradise, experience the perfect blend of Thai charm and cats." data-lang-zh="曼谷的猫咪乐园，体验泰式风情与猫咪的完美结合。" data-lang-th="สวรรค์ของแมวแห่งกรุงเทพฯ สัมผัสประสบการณ์การผสมผสานที่ลงตัวระหว่างเสน่ห์แบบไทยกับแมว" data-lang-id="Surga kucing di Bangkok, rasakan perpaduan sempurna antara pesona Thailand dan kucing.">Bangkok's feline paradise, experience the perfect blend of Thai charm and cats.</p>
-                    <ul>
-                        <li><strong><span data-lang-en="Cafe Name:" data-lang-zh="猫咖名称：" data-lang-th="ชื่อคาเฟ่:" data-lang-id="Nama Kafe:">Cafe Name:</span></strong> <span data-lang-en="Siam Cat House Cafe" data-lang-zh="暹罗猫舍咖啡" data-lang-th="สยาม แคท เฮาส์ คาเฟ่" data-lang-id="Kafe Rumah Kucing Siam">Siam Cat House Cafe</span></li>
-                        <li><strong><span data-lang-en="Address:" data-lang-zh="地址：" data-lang-th="ที่อยู่:" data-lang-id="Alamat:">Address:</span></strong> <span data-lang-en="Sukhumvit Soi 24, Bangkok, Thailand" data-lang-zh="Sukhumvit Soi 24, Bangkok, Thailand" data-lang-th="สุขุมวิท ซอย 24 กรุงเทพฯ ประเทศไทย" data-lang-id="Sukhumvit Soi 24, Bangkok, Thailand">Sukhumvit Soi 24, Bangkok, Thailand</span></li>
-                        <li><strong><span data-lang-en="Opening Hours:" data-lang-zh="开放时间：" data-lang-th="เวลาเปิดทำการ:" data-lang-id="Jam Buka:">Opening Hours:</span></strong> <span data-lang-en="Tuesday to Sunday 11:00 AM - 9:00 PM" data-lang-zh="周二至周日 11:00 - 21:00" data-lang-th="อังคารถึงอาทิตย์ 11:00 - 21:00 น." data-lang-id="Selasa hingga Minggu 11.00 - 21.00">Tuesday to Sunday 11:00 AM - 9:00 PM</span></li>
-                        <li><strong><span data-lang-en="Features:" data-lang-zh="特色：" data-lang-th="คุณสมบัติพิเศษ:" data-lang-id="Fitur:">Features:</span></strong> <span data-lang-en="Specializes in rescuing Siamese and local Thai cats, with an environment full of Thai artistic flair." data-lang-zh="专注于暹罗猫及泰国本地猫咪的救助，环境充满泰式艺术气息。" data-lang-th="เชี่ยวชาญในการช่วยเหลือแมวสยามและแมวไทยท้องถิ่น พร้อมสภาพแวดล้อมที่เต็มไปด้วยกลิ่นอายศิลปะไทย" data-lang-id="Mengkhususkan diri dalam menyelamatkan kucing Siam dan kucing lokal Thailand, dengan lingkungan yang penuh sentuhan artistik Thailand.">Specializes in rescuing Siamese and local Thai cats, with an environment full of Thai artistic flair.</span></li>
-                    </ul>
-
-                    <h4 data-lang-en="🐾 Resident Cat Profiles" data-lang-zh="🐾 店内猫咪档案" data-lang-th="🐾 โปรไฟล์แมวประจำคาเฟ่" data-lang-id="🐾 Profil Kucing Penghuni">🐾 Resident Cat Profiles</h4>
-                    <div class="cafe-cats-grid">
-                        <div class="cat-profile-card small">
-                            <h5 data-lang-en="🌟 Thai" data-lang-zh="🌟 阿泰" data-lang-th="🌟 เจ้าไทย" data-lang-id="🌟 Si Thai">🌟 Thai</h5>
-                            <img src="images/thai_thai.jpg" alt="Thai" class="cat-img">
-                            <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="A lively Siamese cat who loves interacting with guests." data-lang-zh="一只活泼的暹罗猫，喜欢和客人互动。" data-lang-th="แมวสยามที่ร่าเริง ชอบโต้ตอบกับแขก" data-lang-id="Kucing Siam yang lincah yang suka berinteraksi dengan tamu.">A lively Siamese cat who loves interacting with guests.</span></p>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/YOUR_THAI_THAI_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                <div id="paws-cat-cafe-details" class="cafe-detail-section hidden">
+                    <h3 data-lang="cafe_details_paws_cat_title">Cats at Paws Cat Cafe Thailand</h3>
+                    <div class="cat-list">
+                        <div class="cat-card">
+                            <img src="images/paws-cat-1.jpg" alt="Paws Cat Cafe Cat 1">
+                            <h4 data-lang="cat_coffee_name">Cat: Coffee</h4>
+                            <p data-lang="cat_coffee_char">Personality: Aloof and proud, but gentle at heart.</p>
                         </div>
-                        <div class="cat-profile-card small">
-                            <h5 data-lang-en="🌟 Mango" data-lang-zh="🌟 芒果" data-lang-th="🌟 มะม่วง" data-lang-id="🌟 Mango">🌟 Mango</h5>
-                            <img src="images/thai_mango.jpg" alt="Mango" class="cat-img">
-                            <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="A quiet orange cat, always observing everything from the corner." data-lang-zh="安静的橘猫，总是在角落里观察一切。" data-lang-th="แมวส้มที่เงียบๆ มักจะเฝ้าสังเกตทุกอย่างจากมุมห้อง" data-lang-id="Kucing oranye yang tenang, selalu mengamati segalanya dari sudut.">A quiet orange cat, always observing everything from the corner.</span></p>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/YOUR_THAI_MANGO_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                        <div class="cat-card">
+                            <img src="images/paws-cat-2.jpg" alt="Paws Cat Cafe Cat 2">
+                            <h4 data-lang="cat_milk_name">Cat: Milk</h4>
+                            <p data-lang="cat_milk_char">Personality: Curious and loves exploring new things.</p>
                         </div>
-                        </div>
-                    <p class="donation-cloud-adopt-text"><strong data-lang-en="💰 Direct Donation:" data-lang-zh="💰 直接捐款：" data-lang-th="💰 บริจาคโดยตรง:" data-lang-id="💰 Donasi Langsung:">💰 Direct Donation:</strong> <span data-lang-en="Support Siam Cat House Cafe's cat rescue projects." data-lang-zh="支持暹罗猫舍咖啡的猫咪救助项目。" data-lang-th="สนับสนุนโครงการช่วยเหลือแมวของสยาม แคท เฮาส์ คาเฟ่" data-lang-id="Dukung proyek penyelamatan kucing Siam Cat House Cafe.">Support Siam Cat House Cafe's cat rescue projects.</span></p>
-                    <a href="YOUR_THAI_DONATION_LINK" class="button" target="_blank" data-lang-en="Donate Now" data-lang-zh="立即捐款" data-lang-th="บริจาคตอนนี้" data-lang-id="Donasi Sekarang">Donate Now</a>
-                    <p class="donation-cloud-adopt-text"><strong data-lang-en="☁️ Virtual Adoption:" data-lang-zh="☁️ 云领养：" data-lang-th="☁️ การรับเลี้ยงเสมือนจริง:" data-lang-id="☁️ Adopsi Virtual:">☁️ Virtual Adoption:</strong> <span data-lang-en="Can't adopt right now? Choose virtual adoption and become a distant guardian for cats in Thailand." data-lang-zh="选择云领养，成为泰国猫咪的远方守护者。" data-lang-th="เลือกการรับเลี้ยงเสมือนจริงและเป็นผู้พิทักษ์แมวในประเทศไทยจากระยะไกล" data-lang-id="Tidak bisa mengadopsi sekarang? Pilih adopsi virtual dan jadilah pelindung jarak jauh bagi kucing-kucing di Thailand.">Can't adopt right now? Choose virtual adoption and become a distant guardian for cats in Thailand.</span></p>
-                    <a href="YOUR_THAI_VIRTUAL_ADOPTION_LINK" class="button" target="_blank" data-lang-en="Virtually Adopt a Cat" data-lang-zh="云领养一只猫咪" data-lang-th="รับเลี้ยงแมวเสมือนจริง" data-lang-id="Adopsi Kucing Secara Virtual">Virtually Adopt a Cat</a>
-                </div>
-
-                <div class="add-more-cafes">
-                    <h3 data-lang-en="✨ Add More Cat Cafes" data-lang-zh="✨ 添加更多猫咖" data-lang-th="✨ เพิ่มคาเฟ่แมวเพิ่มเติม" data-lang-id="✨ Tambah Lebih Banyak Kafe Kucing">✨ Add More Cat Cafes</h3>
-                    <p data-lang-en="We welcome more cat cafes to join our alliance and collectively help stray cats!" data-lang-zh="我们欢迎更多猫咖加入我们的联盟，共同为流浪猫咪提供帮助！" data-lang-th="เรายินดีต้อนรับคาเฟ่แมวเพิ่มเติมให้เข้าร่วมพันธมิตรของเราและร่วมกันช่วยเหลือแมวจรจัด!" data-lang-id="Kami menyambut lebih banyak kafe kucing untuk bergabung dengan aliansi kami dan secara kolektif membantu kucing-kucing jalanan!">We welcome more cat cafes to join our alliance and collectively help stray cats!</p>
-                    <a href="#contact" class="button primary" data-lang-en="Contact Us to Join" data-lang-zh="联系我们，加入联盟" data-lang-th="ติดต่อเราเพื่อเข้าร่วม" data-lang-id="Hubungi Kami untuk Bergabung">Contact Us to Join</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="our-cats" class="cats-module">
-            <div class="container">
-                <h2 data-lang-en="🐱 Our Feline Friends" data-lang-zh="🐱 我们的猫咪" data-lang-th="🐱 เพื่อนแมวของเรา" data-lang-id="🐱 Teman Kucing Kami">🐱 Our Feline Friends</h2>
-                <p class="section-description" data-lang-en="Here, you can meet every adorable cat waiting for adoption or receiving our direct help. Each one has a unique story and personality." data-lang-zh="在这里，您可以认识每一只等待领养或受到我们直接帮助的可爱猫咪。它们都有着独特的故事和个性。" data-lang-th="ที่นี่ คุณสามารถพบกับแมวน่ารักทุกตัวที่รอการรับเลี้ยงหรือได้รับการช่วยเหลือโดยตรงจากเรา แต่ละตัวมีเรื่องราวและบุคลิกเฉพาะตัว" data-lang-id="Di sini, Anda dapat bertemu setiap kucing menggemaskan yang menunggu adopsi atau menerima bantuan langsung dari kami. Masing-masing memiliki cerita dan kepribadian yang unik.">Here, you can meet every adorable cat waiting for adoption or receiving our direct help. Each one has a unique story and personality.</p>
+        <section id="donate" class="section">
+            <h2 data-lang="section_donate_title">Donate to Support</h2>
+            <p data-lang="donate_subtitle">Every bit of your kindness will bring warmth and hope to stray cats.</p>
+            <div class="donation-options">
+                <button class="payment-method" data-lang="donate_method_alipay">Alipay</button>
+                <button class="payment-method" data-lang="donate_method_credit_card">Credit Card (Visa/Mastercard)</button>
+                <button class="payment-method" data-lang="donate_method_apple_pay">Apple Pay</button>
+                <button class="payment-method" data-lang="donate_method_paypal">PayPal</button>
+            </div>
 
-                <div class="cat-profile-grid">
-                    <div class="cat-profile-card">
-                        <h3 data-lang-en="🌟 Lele" data-lang-zh="🌟 乐乐" data-lang-th="🌟 เล่อเล่อ" data-lang-id="🌟 Lele">🌟 Lele</h3>
-                        <img src="images/cat1.jpg" alt="Lele" class="cat-img">
-                        <p><strong data-lang-en="Age:" data-lang-zh="年龄：" data-lang-th="อายุ:" data-lang-id="Usia:">Age:</strong> <span data-lang-en="3 years" data-lang-zh="3 岁" data-lang-th="3 ปี" data-lang-id="3 tahun">3 years</span></p>
-                        <p><strong data-lang-en="Gender:" data-lang-zh="性别：" data-lang-th="เพศ:" data-lang-id="Jenis Kelamin:">Gender:</strong> <span data-lang-en="Male" data-lang-zh="公" data-lang-th="ผู้" data-lang-id="Jantan">Male</span></p>
-                        <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="Playful and active, loves to play with people and craves attention." data-lang-zh="活泼好动，喜欢和人玩耍，爱撒娇。" data-lang-th="ร่าเริงและกระตือรือร้น ชอบเล่นกับผู้คนและต้องการความสนใจ" data-lang-id="Lincah dan aktif, suka bermain dengan orang dan mendambakan perhatian.">Playful and active, loves to play with people and craves attention.</span></p>
-                        <p><strong data-lang-en="Story:" data-lang-zh="故事：" data-lang-th="เรื่องราว:" data-lang-id="Kisah:">Story:</strong> <span data-lang-en="Lele was abandoned in a park by his owner. He is very friendly and is now waiting for a warm home." data-lang-zh="乐乐是被主人遗弃在公园的，它非常亲人，现在正在等待一个温暖的家。" data-lang-th="เล่อเล่อถูกทิ้งไว้ในสวนสาธารณะโดยเจ้าของ เขาเป็นมิตรมากและกำลังรอคอยบ้านที่อบอุ่น" data-lang-id="Lele ditinggalkan di taman oleh pemiliknya. Dia sangat ramah dan sekarang menunggu rumah yang hangat.">Lele was abandoned in a park by his owner. He is very friendly and is now waiting for a warm home.</span></p>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_CAT1_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
+            <div class="donation-form">
+                <h3 data-lang="donate_form_title">Fill in Donation Information</h3>
+                <form id="donationForm">
+                    <label for="donorName" data-lang="donate_label_name">Donor Name (or Nickname):</label>
+                    <input type="text" id="donorName" name="donorName" required>
 
-                    <div class="cat-profile-card">
-                        <h3 data-lang-en="🌟 Tiantian" data-lang-zh="🌟 甜甜" data-lang-th="🌟 เทียนเทียน" data-lang-id="🌟 Tiantian">🌟 Tiantian</h3>
-                        <img src="images/cat2.jpg" alt="Tiantian" class="cat-img">
-                        <p><strong data-lang-en="Age:" data-lang-zh="年龄：" data-lang-th="อายุ:" data-lang-id="Usia:">Age:</strong> <span data-lang-en="1 year" data-lang-zh="1 岁" data-lang-th="1 ปี" data-lang-id="1 tahun">1 year</span></p>
-                        <p><strong data-lang-en="Gender:" data-lang-zh="性别：" data-lang-th="เพศ:" data-lang-id="Jenis Kelamin:">Gender:</strong> <span data-lang-en="Female" data-lang-zh="母" data-lang-th="เมีย" data-lang-id="Betina">Female</span></p>
-                        <p><strong data-lang-en="Personality:" data-lang-zh="性格：" data-lang-th="นิสัย:" data-lang-id="Kepribadian:">Personality:</strong> <span data-lang-en="Shy but gentle, needs time to adjust to new environments, but becomes very cuddly once familiar." data-lang-zh="害羞但温柔，需要时间适应新环境，一旦熟悉就会非常粘人。" data-lang-th="ขี้อายแต่อ่อนโยน ต้องใช้เวลาในการปรับตัวให้เข้ากับสภาพแวดล้อมใหม่ แต่เมื่อคุ้นเคยแล้วจะขี้อ้อนมาก" data-lang-id="Pemalu tapi lembut, butuh waktu untuk menyesuaikan diri dengan lingkungan baru, tetapi menjadi sangat manja setelah terbiasa.">Shy but gentle, needs time to adjust to new environments, but becomes very cuddly once familiar.</span></p>
-                        <p><strong data-lang-en="Story:" data-lang-zh="故事：" data-lang-th="เรื่องราว:" data-lang-id="Kisah:">Story:</strong> <span data-lang-en="Tiantian was a rescued injured kitten. After careful nursing, she has recovered and is now looking for a quiet home." data-lang-zh="甜甜是一只被救助的受伤小猫，经过悉心照料，她已经康复，现在寻找一个安静的家庭。" data-lang-th="เทียนเทียนเป็นลูกแมวที่ได้รับบาดเจ็บและได้รับการช่วยเหลือ หลังจากดูแลอย่างระมัดระวัง เธอได้ฟื้นตัวแล้วและกำลังมองหาบ้านที่เงียบสงบ" data-lang-id="Tiantian adalah anak kucing yang terluka yang diselamatkan. Setelah perawatan yang cermat, dia telah pulih dan sekarang mencari rumah yang tenang.">Tiantian was a rescued injured kitten. After careful nursing, she has recovered and is now looking for a quiet home.</span></p>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_CAT2_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    </div>
+                    <label for="donorLocation" data-lang="donate_label_location">Location:</label>
+                    <input type="text" id="donorLocation" name="donorLocation" required>
 
-                <p class="call-to-action" data-lang-en="Friendly Reminder: If you are interested in a specific cat, wish to learn more, or are considering adoption, please feel free to contact us!" data-lang-zh="温馨提示：如果您对某只猫咪感兴趣，想了解更多信息或有意领养，欢迎随时联系我们！" data-lang-th="ข้อควรจำ: หากคุณสนใจแมวตัวใดตัวหนึ่ง ต้องการเรียนรู้เพิ่มเติม หรือกำลังพิจารณาการรับเลี้ยง โปรดติดต่อเราได้ตลอดเวลา!" data-lang-id="Pengingat Ramah: Jika Anda tertarik pada kucing tertentu, ingin tahu lebih banyak, atau sedang mempertimbangkan adopsi, jangan ragu untuk menghubungi kami!">Friendly Reminder: If you are interested in a specific cat, wish to learn more, or are considering adoption, please feel free to contact us!</p>
+                    <label for="donationAmount" data-lang="donate_label_amount">Donation Amount (RMB):</label>
+                    <input type="number" id="donationAmount" name="donationAmount" min="1" step="1" required>
+
+                    <button type="submit" data-lang="donate_submit_btn">Confirm Donation</button>
+                </form>
+            </div>
+
+            <div class="donation-list">
+                <h3 data-lang="donate_recent_donations">Recent Donation Records</h3>
+                <ul id="donationsList">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="tracking" class="section">
+            <h2 data-lang="section_tracking_title">Expense Tracking</h2>
+            <p data-lang="tracking_subtitle">The whereabouts of every donation will be transparently disclosed.</p>
+            <div class="expense-table-container">
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th data-lang="tracking_header_date">Expense Date</th>
+                            <th data-lang="tracking_header_category">Category</th>
+                            <th data-lang="tracking_header_proof">Payment Proof</th>
+                            <th data-lang="tracking_header_payer">Payer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-07-15</td>
+                            <td><span data-lang-key="expense_cat_food" data-lang-default="猫粮采购">Cat Food Purchase</span></td>
+                            <td><a href="images/payment-proof-example.jpg" target="_blank" data-lang="tracking_proof_view">View Proof</a></td>
+                            <td><span data-lang-key="payer_aiko" data-lang-default="小爱">Aiko</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-07-10</td>
+                            <td><span data-lang-key="expense_cat_vaccine" data-lang-default="疫苗费用">Vaccine Fees</span></td>
+                            <td><a href="images/payment-proof-example.jpg" target="_blank" data-lang="tracking_proof_view">View Proof</a></td>
+                            <td><span data-lang-key="payer_volunteer_a" data-lang-default="志愿者A">Volunteer A</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="addExpenseBtn" data-lang="tracking_add_expense_btn">Add New Expense</button>
+            </div>
+
+            <div id="expenseModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 data-lang="tracking_modal_title">Add New Expense Record</h3>
+                    <form id="expenseForm">
+                        <label for="expenseDate" data-lang="tracking_label_date">Expense Date:</label>
+                        <input type="date" id="expenseDate" required>
+
+                        <label for="expenseCategory" data-lang="tracking_label_category">Category:</label>
+                        <input type="text" id="expenseCategory" required>
+
+                        <label for="expenseProof" data-lang="tracking_label_proof">Payment Proof (Image Upload):</label>
+                        <input type="file" id="expenseProof" accept="image/*">
+                        <small data-lang="tracking_proof_note">Please upload a proof image.</small>
+
+                        <label for="expensePayer" data-lang="tracking_label_payer">Payer:</label>
+                        <input type="text" id="expensePayer" required>
+
+                        <button type="submit" data-lang="tracking_submit_btn">Submit</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <h2 data-lang-en="💖 Join Us and Help Protect Our Feline Friends!" data-lang-zh="💖 加入我们，一起守护喵星人！" data-lang-th="💖 มาร่วมกับเราและช่วยปกป้องเพื่อนแมวของเรา!" data-lang-id="💖 Bergabunglah Bersama Kami dan Bantu Lindungi Teman Kucing Kita!">💖 Join Us and Help Protect Our Feline Friends!</h2>
-            <p data-lang-en="Contact Email: info@catcharity.org" data-lang-zh="联系邮箱：info@catcharity.org" data-lang-th="อีเมลติดต่อ: info@catcharity.org" data-lang-id="Email Kontak: info@catcharity.org">Contact Email: info@catcharity.org</p>
-            <p data-lang-en="Phone: +86 123 4567 890" data-lang-zh="电话：+86 123 4567 890" data-lang-th="โทรศัพท์: +86 123 4567 890" data-lang-id="Telepon: +86 123 4567 890">Phone: +86 123 4567 890</p>
-            <p>© 2025 <span data-lang-en="Purr-fect Haven" data-lang-zh="喵星人守护站" data-lang-th="เพอร์เฟค เฮฟเว่น" data-lang-id="Surga Sempurna">Purr-fect Haven</span>. <span data-lang-en="All rights reserved." data-lang-zh="版权所有。" data-lang-th="สงวนลิขสิทธิ์." data-lang-id="Hak cipta dilindungi undang-undang.">All rights reserved.</span></p>
-        </div>
+    <footer>
+        <p data-lang="footer_text">&copy; 2024 Cat Guardians. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script> </body>
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
