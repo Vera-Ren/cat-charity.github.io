@@ -1,117 +1,214 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const langSwitcher = document.querySelector('.lang-switcher');
-    const langElements = document.querySelectorAll('[data-lang-en], [data-lang-zh], [data-lang-th], [data-lang-id]');
-    let currentLang = localStorage.getItem('lang') || 'en'; // Default language to English
+    // Language Switcher Logic
+    const languageSwitcher = document.getElementById('language-switcher');
+    // Set default language to English, or use previously selected language
+    let currentLanguage = localStorage.getItem('catCharityLanguage') || 'en';
 
-    // Function to update content based on selected language
-    function updateContent(lang) {
-        langElements.forEach(element => {
-            const enText = element.getAttribute('data-lang-en');
-            const zhText = element.getAttribute('data-lang-zh');
-            const thText = element.getAttribute('data-lang-th');
-            const idText = element.getAttribute('data-lang-id');
-
-            if (lang === 'en' && enText) {
-                element.innerHTML = enText;
-            } else if (lang === 'zh' && zhText) {
-                element.innerHTML = zhText;
-            } else if (lang === 'th' && thText) {
-                element.innerHTML = thText;
-            } else if (lang === 'id' && idText) {
-                element.innerHTML = idText;
+    // Function to apply translations to all elements with data-lang attribute
+    const applyTranslations = (lang) => {
+        document.querySelectorAll('[data-lang]').forEach(element => {
+            const key = element.getAttribute('data-lang');
+            if (translations[lang] && translations[lang][key]) {
+                // Handle input placeholders specifically
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
             }
         });
 
-        // Update active state of language switcher buttons
-        document.querySelectorAll('.lang-switcher span').forEach(span => {
-            if (span.getAttribute('data-lang') === lang) {
-                span.classList.add('active');
-            } else {
-                span.classList.remove('active');
-            }
-        });
+        // Handle specific case for title element
+        document.title = translations[lang] ? translations[lang]["app_title"] : "Cat Guardians - Home of Love and Hope";
 
-        // Update the lang attribute of the HTML root element
-        document.documentElement.lang = lang;
+        // Re-render dynamically added content if needed (like donation list)
+        renderDonations();
+        // Note: For existing expense table rows, we use data-lang-key which is handled by getTranslation
+        // when a new expense is added, ensuring they adapt without full re-render on language change.
+    };
 
-        // Re-update donation amount to reflect currency/language preference
-        updateDonationAmount();
-    }
+    // Set initial language in the dropdown
+    languageSwitcher.value = currentLanguage;
+    // Apply translations on page load
+    applyTranslations(currentLanguage);
 
-    // Initialize page language
-    updateContent(currentLang);
-
-    // Language switcher click event
-    langSwitcher.addEventListener('click', (event) => {
-        if (event.target.tagName === 'SPAN') {
-            const newLang = event.target.getAttribute('data-lang');
-            if (newLang && newLang !== currentLang) {
-                currentLang = newLang;
-                localStorage.setItem('lang', newLang); // Save language choice
-                updateContent(currentLang);
-            }
-        }
+    // Event listener for language change
+    languageSwitcher.addEventListener('change', (event) => {
+        currentLanguage = event.target.value;
+        localStorage.setItem('catCharityLanguage', currentLanguage); // Save selection
+        applyTranslations(currentLanguage); // Apply new language
     });
 
-    // Function to update donation amount
-    function updateDonationAmount() {
-        // Simulated data, in a real application this would come from a backend
-        const totalAmountUSD = 15789.23;
+    // --- Utility function for getting translation (used by dynamic content) ---
+    const getTranslation = (key, defaultValue = key) => {
+        return translations[currentLanguage] && translations[currentLanguage][key] ? translations[currentLanguage][key] : defaultValue;
+    };
 
-        let displayAmount = '';
-        if (currentLang === 'zh') {
-            const totalAmountCNY = (totalAmountUSD * 7.25).toFixed(2); // Example CNY exchange rate
-            displayAmount = `¥ ${totalAmountCNY}`;
-        } else if (currentLang === 'th') {
-            const totalAmountTHB = (totalAmountUSD * 36.80).toFixed(2); // Example THB exchange rate
-            displayAmount = `฿ ${totalAmountTHB}`;
-        } else if (currentLang === 'id') {
-            const totalAmountIDR = (totalAmountUSD * 16300).toLocaleString('id-ID', { maximumFractionDigits: 0 }); // Example IDR exchange rate, formatted
-            displayAmount = `Rp ${totalAmountIDR}`;
-        } else { // Default to English (USD)
-            displayAmount = `$ ${totalAmountUSD.toFixed(2)}`;
-        }
 
-        // Update the displayed amount based on the current language
-        // We'll update the element specific to the currently active language,
-        // or a common element if one exists. For simplicity, we'll keep the
-        // separate IDs and just update the one that corresponds to the active lang.
-        // A better approach for real dynamic numbers would be a single span and
-        // update its text content based on the chosen currency format.
-        if (document.getElementById('total-donations-en')) {
-            document.getElementById('total-donations-en').textContent = (currentLang === 'en') ? displayAmount : 'Actively fundraising!'; // Show English text if English, otherwise generic for other languages
-        }
-        if (document.getElementById('total-donations')) { // This was used for Chinese previously, now a fallback
-             document.getElementById('total-donations').textContent = (currentLang === 'zh') ? displayAmount : '努力筹集中！';
-        }
-        if (document.getElementById('total-donations-th')) {
-            document.getElementById('total-donations-th').textContent = (currentLang === 'th') ? displayAmount : 'กำลังระดมทุน!';
-        }
-        if (document.getElementById('total-donations-id')) {
-            document.getElementById('total-donations-id').textContent = (currentLang === 'id') ? displayAmount : 'Sedang Menggalang Dana!';
-        }
-
-        // A more robust way to handle donation amount display across languages
-        // would be to have a single element for the amount and update its text content.
-        const totalDonationsSpan = document.querySelector('.donation-summary p span[id]');
-        if (totalDonationsSpan) {
-            totalDonationsSpan.textContent = displayAmount;
-        }
-
-    }
-
-    // Update donation amount on page load
-    updateDonationAmount();
-    // You could set an interval to regularly update if data changes in real-time
-    // setInterval(updateDonationAmount, 60000); // Update every minute
-
-    // Smooth scrolling to anchor links
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            document.querySelector(this.getAttribute('href')).scrollInView({
                 behavior: 'smooth'
             });
         });
+    });
+
+    // --- Cat Cafe Alliance Section ---
+    const cafeCards = document.querySelectorAll('.cafe-card');
+    const cafeDetailsSection = document.getElementById('cafe-details');
+    const oddCatCafeDetails = document.getElementById('odd-cat-cafe-details');
+    const pawsCatCafeDetails = document.getElementById('paws-cat-cafe-details');
+    const backToCafesBtn = document.querySelector('.back-to-cafes');
+    const cafeList = document.querySelector('.cafe-list');
+
+    cafeCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const cafeId = card.dataset.cafe;
+            cafeList.classList.add('hidden');
+            cafeDetailsSection.classList.remove('hidden');
+
+            if (cafeId === 'odd-cat-cafe') {
+                oddCatCafeDetails.classList.remove('hidden');
+                pawsCatCafeDetails.classList.add('hidden');
+            } else if (cafeId === 'paws-cat-cafe') {
+                pawsCatCafeDetails.classList.remove('hidden');
+                oddCatCafeDetails.classList.add('hidden');
+            }
+        });
+    });
+
+    backToCafesBtn.addEventListener('click', () => {
+        cafeList.classList.remove('hidden');
+        cafeDetailsSection.classList.add('hidden');
+        oddCatCafeDetails.classList.add('hidden');
+        pawsCatCafeDetails.classList.add('hidden');
+    });
+
+    // --- Donation Section ---
+    const donationForm = document.getElementById('donationForm');
+    const donationsList = document.getElementById('donationsList');
+
+    // Load donations from localStorage (if any)
+    let donations = JSON.parse(localStorage.getItem('catCharityDonations')) || [];
+
+    const renderDonations = () => {
+        donationsList.innerHTML = ''; // Clear existing list
+        donations.forEach(donation => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span>${donation.name}</span>
+                <span>${donation.location}</span>
+                <span>¥${donation.amount}</span>
+            `;
+            donationsList.appendChild(listItem);
+        });
+    };
+
+    renderDonations(); // Initial render
+
+    donationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const donorName = document.getElementById('donorName').value;
+        const donorLocation = document.getElementById('donorLocation').value;
+        const donationAmount = parseFloat(document.getElementById('donationAmount').value);
+
+        if (donorName && donorLocation && donationAmount > 0) {
+            const newDonation = {
+                name: donorName,
+                location: donorLocation,
+                amount: donationAmount,
+                timestamp: new Date().toISOString()
+            };
+            donations.push(newDonation);
+            localStorage.setItem('catCharityDonations', JSON.stringify(donations));
+            renderDonations(); // Re-render to show new donation
+
+            // Clear form fields
+            donationForm.reset();
+            alert(getTranslation('donate_alert_success')); // Use translated alert
+        } else {
+            alert(getTranslation('donate_alert_invalid')); // Use translated alert
+        }
+    });
+
+    // --- Expense Tracking Section ---
+    const addExpenseBtn = document.getElementById('addExpenseBtn');
+    const expenseModal = document.getElementById('expenseModal');
+    const closeModalBtn = document.querySelector('.close-button');
+    const expenseForm = document.getElementById('expenseForm');
+    const expenseTableBody = document.querySelector('#expenseTable tbody');
+
+    // Helper to add a single expense row (used by form submission)
+    const addExpenseRow = (expense) => {
+        const row = expenseTableBody.insertRow();
+        row.insertCell().textContent = expense.date;
+        row.insertCell().textContent = expense.category; // Use raw text for dynamic input
+        const proofCell = row.insertCell();
+        if (expense.proof) {
+            const link = document.createElement('a');
+            link.href = expense.proof;
+            link.target = '_blank';
+            link.textContent = getTranslation('tracking_proof_view'); // Translated text
+            proofCell.appendChild(link);
+        } else {
+            proofCell.textContent = getTranslation('tracking_proof_none'); // Translated text
+        }
+        row.insertCell().textContent = expense.payer; // Use raw text for dynamic input
+    };
+
+
+    addExpenseBtn.addEventListener('click', () => {
+        expenseModal.style.display = 'flex'; // Show modal
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        expenseModal.style.display = 'none'; // Hide modal
+    });
+
+    // Hide modal if clicked outside
+    window.addEventListener('click', (event) => {
+        if (event.target == expenseModal) {
+            expenseModal.style.display = 'none';
+        }
+    });
+
+    expenseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const expenseDate = document.getElementById('expenseDate').value;
+        const expenseCategory = document.getElementById('expenseCategory').value;
+        const expensePayer = document.getElementById('expensePayer').value;
+        const expenseProofFile = document.getElementById('expenseProof').files[0];
+
+        let proofUrl = '';
+        if (expenseProofFile) {
+            // For a real-world scenario, you'd upload this to a server
+            // and get a URL. For a simple GitHub Pages site, you might
+            // ask users to manually upload to an 'images' folder and
+            // provide the path, or just use Data URLs for temporary display.
+            proofUrl = URL.createObjectURL(expenseProofFile);
+            alert(getTranslation('tracking_alert_upload_note')); // Use translated alert
+        }
+
+        const newExpense = {
+            date: expenseDate,
+            category: expenseCategory,
+            proof: proofUrl,
+            payer: expensePayer
+        };
+
+        addExpenseRow(newExpense); // Add the new row to the table
+
+        // Optional: Save to localStorage if you want persistence beyond session
+        // let expenses = JSON.parse(localStorage.getItem('catCharityExpenses')) || [];
+        // expenses.push(newExpense);
+        // localStorage.setItem('catCharityExpenses', JSON.stringify(expenses));
+
+        expenseForm.reset();
+        expenseModal.style.display = 'none';
+        alert(getTranslation('tracking_alert_success')); // Use translated alert
     });
 });
