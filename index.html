@@ -6,6 +6,52 @@
     <title data-lang="app_title">Cat Guardians - Home of Love and Hope</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Consent Mode v2：默认拒绝（必要存储允许） -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('consent', 'default', {
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    security_storage: 'granted'
+  });
+
+  //（可选）给横幅按钮用
+  function consentAcceptAll(){
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+  }
+  function consentRejectAll(){
+    gtag('consent', 'update', {
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+  }
+</script>
+
+<!-- 只保留一个 gtag.js 引用，不要重复 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17488156641"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'AW-17488156641');   // Google Ads 基础标签
+
+  // 如果你也有 GA4，就在这里再加一行，用同一个 gtag 实例：
+  // gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
     <header>
